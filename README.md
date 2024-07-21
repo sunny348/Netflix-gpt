@@ -17,6 +17,24 @@ USED FIREBASE FOR AUTHENTICATION
 
 --create redux store with user slice
 
+implement sign out
+update profile
+bugfix: sign up user display name and profile picture update
+bugfix: if the user is not logged in  redirect/browse to login page and vice versa
+
+unscribed to the onAuthStateChanged Callback
+add hardcoded values to the constant file
+regter tmdb api and  create an app and get access token
+get data from tmdb now playing movies list api
+custom hook for now playing movies
+create movieslice
+updating store with  movies data
+planning for maincontainer and secondary container
+fetch data for trailer video
+update store with trailer video data
+embedded the youtube video and make it autopaly and mute
+tailwind classes to make main container look awesome
+
 
 
 

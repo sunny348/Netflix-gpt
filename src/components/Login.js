@@ -6,16 +6,17 @@ import {checkValidateData} from "../utils/validate";
 
 import {  createUserWithEmailAndPassword , signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from 'react-router-dom';
+
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVATAT } from '../utils/constrants';
 
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
 
   const [errorMessage,seterrorMessage] = useState(null);
-  const navigate = useNavigate();
+ 
   const dispatch = useDispatch();
 
   
@@ -45,7 +46,7 @@ const Login = () => {
 
     updateProfile(user, {
       displayName: name.current.value, 
-      photoURL: "https://occ-0-2991-2164.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e",
+      photoURL: USER_AVATAT,
     }).then(() => {
       // in this i am fetching data from the current user
       const {uid, email,displayName,photoURL} = auth.currentUser;
@@ -54,7 +55,7 @@ const Login = () => {
 
 
    
-      navigate("/browse")
+    
       // Profile updated!
       // ...
     }).catch((error) => {
@@ -84,7 +85,7 @@ const Login = () => {
     const user = userCredential.user;
     // ...
     console.log(user);
-    navigate("/browse");
+ 
     
 
   })
