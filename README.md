@@ -34,6 +34,11 @@ fetch data for trailer video
 update store with trailer video data
 embedded the youtube video and make it autopaly and mute
 tailwind classes to make main container look awesome
+Build movie list
+build movie card
+tmdb image cdn url
+made the browser page amazing with tailwind css
+usePopularMovies Custom Hook
 
 
 
